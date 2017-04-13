@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05731BFD1E9F6B2B00B5C81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */; };
+		05731BFF1E9F6B2B00B5C81B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05731BFE1E9F6B2B00B5C81B /* ViewController.swift */; };
+		05731C021E9F6B2B00B5C81B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05731C001E9F6B2B00B5C81B /* Main.storyboard */; };
+		05731C041E9F6B2B00B5C81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05731C031E9F6B2B00B5C81B /* Assets.xcassets */; };
+		05731C071E9F6B2B00B5C81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05731C051E9F6B2B00B5C81B /* LaunchScreen.storyboard */; };
+		E7291A990221B048238523AC /* Pods_SodexoPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05731BF91E9F6B2B00B5C81B /* SodexoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SodexoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05731BFE1E9F6B2B00B5C81B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05731C011E9F6B2B00B5C81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05731C031E9F6B2B00B5C81B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05731C061E9F6B2B00B5C81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05731C081E9F6B2B00B5C81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SodexoPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4213775F1AAD7A9412D5CDF /* Pods-SodexoPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SodexoPass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass.debug.xcconfig"; sourceTree = "<group>"; };
+		E3935189F2EB3A74082E0901 /* Pods-SodexoPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SodexoPass.release.xcconfig"; path = "Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05731BF61E9F6B2B00B5C81B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7291A990221B048238523AC /* Pods_SodexoPass.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05731BF01E9F6B2B00B5C81B = {
+			isa = PBXGroup;
+			children = (
+				05731BFB1E9F6B2B00B5C81B /* SodexoPass */,
+				05731BFA1E9F6B2B00B5C81B /* Products */,
+				D6A61468CFA8C9346A5AB8B9 /* Pods */,
+				EA89BC56AABE5EABEFFF81A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05731BFA1E9F6B2B00B5C81B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05731BF91E9F6B2B00B5C81B /* SodexoPass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05731BFB1E9F6B2B00B5C81B /* SodexoPass */ = {
+			isa = PBXGroup;
+			children = (
+				05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */,
+				05731BFE1E9F6B2B00B5C81B /* ViewController.swift */,
+				05731C001E9F6B2B00B5C81B /* Main.storyboard */,
+				05731C031E9F6B2B00B5C81B /* Assets.xcassets */,
+				05731C051E9F6B2B00B5C81B /* LaunchScreen.storyboard */,
+				05731C081E9F6B2B00B5C81B /* Info.plist */,
+			);
+			path = SodexoPass;
+			sourceTree = "<group>";
+		};
+		D6A61468CFA8C9346A5AB8B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4213775F1AAD7A9412D5CDF /* Pods-SodexoPass.debug.xcconfig */,
+				E3935189F2EB3A74082E0901 /* Pods-SodexoPass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA89BC56AABE5EABEFFF81A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05731BF81E9F6B2B00B5C81B /* SodexoPass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05731C0B1E9F6B2B00B5C81B /* Build configuration list for PBXNativeTarget "SodexoPass" */;
+			buildPhases = (
+				88B42F8C5E2E4E68283C7C20 /* [CP] Check Pods Manifest.lock */,
+				05731BF51E9F6B2B00B5C81B /* Sources */,
+				05731BF61E9F6B2B00B5C81B /* Frameworks */,
+				05731BF71E9F6B2B00B5C81B /* Resources */,
+				5F77ADCBC1D706F9E3F1BF86 /* [CP] Embed Pods Frameworks */,
+				FC50BE994391B11EB9B66E6D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SodexoPass;
+			productName = SodexoPass;
+			productReference = 05731BF91E9F6B2B00B5C81B /* SodexoPass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05731BF11E9F6B2B00B5C81B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Andrey Artemenko";
+				TargetAttributes = {
+					05731BF81E9F6B2B00B5C81B = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 05731BF41E9F6B2B00B5C81B /* Build configuration list for PBXProject "SodexoPass" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05731BF01E9F6B2B00B5C81B;
+			productRefGroup = 05731BFA1E9F6B2B00B5C81B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05731BF81E9F6B2B00B5C81B /* SodexoPass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05731BF71E9F6B2B00B5C81B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05731C071E9F6B2B00B5C81B /* LaunchScreen.storyboard in Resources */,
+				05731C041E9F6B2B00B5C81B /* Assets.xcassets in Resources */,
+				05731C021E9F6B2B00B5C81B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F77ADCBC1D706F9E3F1BF86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B42F8C5E2E4E68283C7C20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC50BE994391B11EB9B66E6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05731BF51E9F6B2B00B5C81B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05731BFF1E9F6B2B00B5C81B /* ViewController.swift in Sources */,
+				05731BFD1E9F6B2B00B5C81B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05731C001E9F6B2B00B5C81B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05731C011E9F6B2B00B5C81B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05731C051E9F6B2B00B5C81B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05731C061E9F6B2B00B5C81B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05731C091E9F6B2B00B5C81B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05731C0A1E9F6B2B00B5C81B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05731C0C1E9F6B2B00B5C81B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4213775F1AAD7A9412D5CDF /* Pods-SodexoPass.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SodexoPass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wtf.SodexoPass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		05731C0D1E9F6B2B00B5C81B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3935189F2EB3A74082E0901 /* Pods-SodexoPass.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SodexoPass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wtf.SodexoPass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05731BF41E9F6B2B00B5C81B /* Build configuration list for PBXProject "SodexoPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05731C091E9F6B2B00B5C81B /* Debug */,
+				05731C0A1E9F6B2B00B5C81B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05731C0B1E9F6B2B00B5C81B /* Build configuration list for PBXNativeTarget "SodexoPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05731C0C1E9F6B2B00B5C81B /* Debug */,
+				05731C0D1E9F6B2B00B5C81B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05731BF11E9F6B2B00B5C81B /* Project object */;
+}
