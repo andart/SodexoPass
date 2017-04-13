@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055F19381E9F7B8A0068E7E5 /* CaptchaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F19371E9F7B8A0068E7E5 /* CaptchaRow.swift */; };
+		055F193A1E9F84E40068E7E5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F19391E9F84E40068E7E5 /* API.swift */; };
 		05731BFD1E9F6B2B00B5C81B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */; };
 		05731BFF1E9F6B2B00B5C81B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05731BFE1E9F6B2B00B5C81B /* ViewController.swift */; };
 		05731C021E9F6B2B00B5C81B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05731C001E9F6B2B00B5C81B /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055F19371E9F7B8A0068E7E5 /* CaptchaRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptchaRow.swift; sourceTree = "<group>"; };
+		055F19391E9F84E40068E7E5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		05731BF91E9F6B2B00B5C81B /* SodexoPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SodexoPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05731BFE1E9F6B2B00B5C81B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				05731C031E9F6B2B00B5C81B /* Assets.xcassets */,
 				05731C051E9F6B2B00B5C81B /* LaunchScreen.storyboard */,
 				05731C081E9F6B2B00B5C81B /* Info.plist */,
+				055F19371E9F7B8A0068E7E5 /* CaptchaRow.swift */,
+				055F19391E9F84E40068E7E5 /* API.swift */,
 			);
 			path = SodexoPass;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F19381E9F7B8A0068E7E5 /* CaptchaRow.swift in Sources */,
 				05731BFF1E9F6B2B00B5C81B /* ViewController.swift in Sources */,
+				055F193A1E9F84E40068E7E5 /* API.swift in Sources */,
 				05731BFD1E9F6B2B00B5C81B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

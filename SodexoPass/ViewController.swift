@@ -10,15 +10,32 @@ import UIKit
 import Eureka
 
 class ViewController: FormViewController {
+    
+    weak var captchaImageView: UIImageView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        form +++ Section("Проверка баланса карты")
+            <<< IntRow() {
+                $0.title = "Номер карты"
+                $0.placeholder = "Укажите номер"  //расположенный на обратной стороне карты
+                $0.add(rule: RuleRequired())
+            }
+        
+            <<< CaptchaRow() {
+                self.captchaImageView = $0.cell.captchaImageView
+                $0.cell.textField.placeholder = "Введите символы с картинки"
+            }
+        
+        
+        API.shared.getCookie() {
+            API.shared.getCaptcha() { (image) in
+                if image != nil {
+                    self.captchaImageView?.image = image
+                }
+            }
+        }
     }
 
 
