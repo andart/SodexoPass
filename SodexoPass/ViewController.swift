@@ -114,6 +114,8 @@ class ViewController: FormViewController, G8TesseractDelegate, BarcodeScannerCod
         
         self.cardNumberRow?.value = Int(code)
         self.cardNumberRow?.cell.textField.text = code
+        
+        self.reloadCaptcha()
     }
     
     func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
