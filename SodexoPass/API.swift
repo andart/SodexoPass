@@ -66,7 +66,11 @@ class API {
     var cookie: HTTPCookie?
     
     func request(_ requestObject: RequestObject, parameters: Parameters?, completion: @escaping (DefaultDataResponse) -> Void) {
-        Alamofire.request(requestObject.url, method: requestObject.method, parameters: parameters, encoding: JSONEncoding.default, headers: requestObject.headers).response { (dataResponse) in
+        var headers = requestObject.headers
+        if let cookie = Alamofire.SessionManager.default.session.configuration.httpCookieStorage?.cookies?.first {
+            headers?["Cookie"] = cookie.name + "=" + cookie.value
+        }
+        Alamofire.request(requestObject.url, method: requestObject.method, parameters: parameters, encoding: URLEncoding.default, headers: headers).response { (dataResponse) in
             completion(dataResponse)
         }
     }
@@ -94,10 +98,14 @@ class API {
         }
     }
     
-    func checkBalance(cardNumber: String, captchaCode: String) {
+    func checkBalance(cardNumber: String, captchaCode: String, completion: @escaping (Any?) -> Void) {
         self.request(RequestObject.balancePath, parameters: ["ean": cardNumber, "captcha": captchaCode]) { (dataResponse) in
             let json = JSON(data: dataResponse.data!)
-            print("")
+            if json != JSON.null {
+                let summ = json["accountInfo"]["availableBal"]
+                completion(summ.rawValue)
+            }
+            
 //            NSString(data: dataResponse.data, encoding:String.Encoding.utf8)
         }
     }

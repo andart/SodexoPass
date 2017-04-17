@@ -24,7 +24,6 @@ class ViewController: FormViewController, G8TesseractDelegate, BarcodeScannerCod
         super.viewDidLoad()
         
         var cardNumber = store.object(forKey: cardStoreKey) as! Int?
-        var captchaCode: String?
         
         form +++ Section("Проверка баланса карты")
             <<< IntRow() {
@@ -61,17 +60,18 @@ class ViewController: FormViewController, G8TesseractDelegate, BarcodeScannerCod
                 self.captchaTextField = $0.cell.textField
                 $0.cell.textField.placeholder = "Введите символы с картинки"
                 $0.cell.button.addTarget(self, action: #selector(ViewController.reloadCaptcha), for: .touchUpInside)
-            }.onCellHighlightChanged({ (cell, row) in
-                if !row.isHighlighted, row.value != nil {
-                    captchaCode = row.value
-                }
-            })
+            }
         
             <<< ButtonRow() {
                 $0.title = "Проверить"
             }.onCellSelection({ (cell, row) in
-                if cardNumber != nil, captchaCode != nil {
-                    API.shared.checkBalance(cardNumber: "\(cardNumber!)", captchaCode: captchaCode!)
+                if cardNumber != nil, let captchaCode = self.captchaTextField?.text {
+                    API.shared.checkBalance(cardNumber: "\(cardNumber!)", captchaCode: captchaCode) { summ in
+                        let alert = UIAlertController(title: "Доступно", message: "\((summ as! Int) / 100)", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
             })
         
