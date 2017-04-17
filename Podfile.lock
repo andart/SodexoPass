@@ -1,21 +1,24 @@
 PODS:
   - Alamofire (4.4.0)
+  - BarcodeScanner (2.0.0)
   - Eureka (2.0.1)
   - SwiftyJSON (3.1.4)
   - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - BarcodeScanner
   - Eureka
   - SwiftyJSON
   - TesseractOCRiOS (= 4.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  BarcodeScanner: 266ab4b479d407b74bc4b473fa5020b4523ad9e3
   Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
-PODFILE CHECKSUM: 51837b13e9e2a9a3a909a37fd56398f80488943e
+PODFILE CHECKSUM: 522fa8b406af659ec04cca83795183c547f85949
 
 COCOAPODS: 1.2.1

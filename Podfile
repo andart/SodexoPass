@@ -7,5 +7,6 @@ target 'SodexoPass' do
   pod 'SwiftyJSON'
   pod 'Eureka'
   pod 'TesseractOCRiOS', '4.0.0'
+  pod 'BarcodeScanner'
 #  pod 'SwiftOCR'
 end

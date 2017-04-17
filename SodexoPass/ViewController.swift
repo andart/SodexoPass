@@ -9,19 +9,21 @@
 import UIKit
 import Eureka
 import TesseractOCR
+import BarcodeScanner
 
 let cardStoreKey = "cardStoreKey"
 
-class ViewController: FormViewController, G8TesseractDelegate {
+class ViewController: FormViewController, G8TesseractDelegate, BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
     
     let store = UserDefaults.standard
     weak var captchaImageView: UIImageView?
     weak var captchaTextField: UITextField?
+    weak var cardNumberRow: IntRow?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var cardNumber = store.integer(forKey: cardStoreKey) as Int?
+        var cardNumber = store.object(forKey: cardStoreKey) as! Int?
         var captchaCode: String?
         
         form +++ Section("Проверка баланса карты")
@@ -29,6 +31,8 @@ class ViewController: FormViewController, G8TesseractDelegate {
                 $0.title = "Номер карты"
                 $0.placeholder = "Укажите номер"
                 $0.add(rule: RuleRequired())
+                
+                self.cardNumberRow = $0
                 
                 if cardNumber != nil {
                     $0.value = cardNumber
@@ -39,11 +43,24 @@ class ViewController: FormViewController, G8TesseractDelegate {
                     self.store.set(cardNumber, forKey: cardStoreKey)
                 }
             })
+            
+            <<< ButtonRow() {
+                $0.title = "Сканировать"
+                }.onCellSelection({ (cell, row) in
+                    let controller = BarcodeScannerController()
+                    controller.codeDelegate = self
+                    controller.errorDelegate = self
+                    controller.dismissalDelegate = self
+                    
+                    self.present(controller, animated: true, completion: nil)
+                })
+
         
             <<< CaptchaRow() {
                 self.captchaImageView = $0.cell.captchaImageView
                 self.captchaTextField = $0.cell.textField
                 $0.cell.textField.placeholder = "Введите символы с картинки"
+                $0.cell.button.addTarget(self, action: #selector(ViewController.reloadCaptcha), for: .touchUpInside)
             }.onCellHighlightChanged({ (cell, row) in
                 if !row.isHighlighted, row.value != nil {
                     captchaCode = row.value
@@ -60,13 +77,18 @@ class ViewController: FormViewController, G8TesseractDelegate {
         
         
         API.shared.getCookie() {
-            API.shared.getCaptcha() { (image) in
-                if image != nil {
-                    self.captchaImageView?.image = image
-                    self.recognizeImage(image!)
-                }
+            self.reloadCaptcha()
+        }
+    }
+    
+    func reloadCaptcha() {
+        API.shared.getCaptcha() { (image) in
+            if image != nil {
+                self.captchaImageView?.image = image
+                self.recognizeImage(image!)
             }
         }
+
     }
     
     fileprivate func recognizeImage(_ image: UIImage) {
@@ -74,11 +96,11 @@ class ViewController: FormViewController, G8TesseractDelegate {
             let tesseract:G8Tesseract = G8Tesseract(language:"eng")
             
             tesseract.delegate = self
-            tesseract.image = image.g8_blackAndWhite()
+            tesseract.image = image.g8_grayScale()
             tesseract.recognize()
             
-            DispatchQueue.main.async { // 2
-                self.captchaTextField?.text = tesseract.recognizedText
+            DispatchQueue.main.async {
+                self.captchaTextField?.text = tesseract.recognizedText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             }
         }
     }
@@ -86,5 +108,21 @@ class ViewController: FormViewController, G8TesseractDelegate {
     func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract!) -> Bool {
         return false; // return true if you need to interrupt tesseract before it finishes
     }
+    
+    func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
+         controller.dismiss(animated: true, completion: nil)
+        
+        self.cardNumberRow?.value = Int(code)
+        self.cardNumberRow?.cell.textField.text = code
+    }
+    
+    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
+        print(error)
+    }
+    
+    func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 }
 

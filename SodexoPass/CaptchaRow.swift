@@ -11,6 +11,10 @@ import Eureka
 
 open class CaptchaCell: Cell<String>, CellType, UITextFieldDelegate  {
     
+    public var captchaImageView: UIImageView
+    public var textField: UITextField
+    public var button: UIButton
+    
     public required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         self.captchaImageView = UIImageView()
         self.captchaImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,15 +23,16 @@ open class CaptchaCell: Cell<String>, CellType, UITextFieldDelegate  {
         self.textField = UITextField()
         self.textField.translatesAutoresizingMaskIntoConstraints = false
         
+        self.button = UIButton()
+        self.button.setImage(UIImage(named: "refresh"), for: .normal)
+        self.button.translatesAutoresizingMaskIntoConstraints = false
+        
         super.init(style: .value1, reuseIdentifier: reuseIdentifier)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    public var captchaImageView: UIImageView
-    public var textField: UITextField
     
     open var dynamicConstraints = [NSLayoutConstraint]()
     
@@ -37,6 +42,7 @@ open class CaptchaCell: Cell<String>, CellType, UITextFieldDelegate  {
         selectionStyle = .none
         contentView.addSubview(self.captchaImageView)
         contentView.addSubview(self.textField)
+        contentView.addSubview(self.button)
         
         self.textField.addTarget(self, action: #selector(CaptchaCell.textFieldDidChange(_:)), for: .editingChanged)
         
@@ -63,11 +69,12 @@ open class CaptchaCell: Cell<String>, CellType, UITextFieldDelegate  {
         contentView.removeConstraints(dynamicConstraints)
         dynamicConstraints = []
         
-        let views : [String: AnyObject] = ["captchaImageView": captchaImageView, "textField": textField]
+        let views : [String: AnyObject] = ["captchaImageView": captchaImageView, "textField": textField, "button": self.button]
         
-        dynamicConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-[captchaImageView(100)]-(15)-[textField]-|", options: [], metrics: nil, views: views))
+        dynamicConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-[captchaImageView(100)]-(15)-[textField]-(15)-[button(40)]-|", options: [], metrics: nil, views: views))
         dynamicConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|-[captchaImageView]-|", options: [], metrics: nil, views: views))
         dynamicConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|-[textField]-|", options: [], metrics: nil, views: views))
+        dynamicConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|-[button]-|", options: [], metrics: nil, views: views))
         
         contentView.addConstraints(dynamicConstraints)
     }
