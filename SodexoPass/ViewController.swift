@@ -8,13 +8,15 @@
 
 import UIKit
 import Eureka
+import TesseractOCR
 
 let cardStoreKey = "cardStoreKey"
 
-class ViewController: FormViewController {
+class ViewController: FormViewController, G8TesseractDelegate {
     
     let store = UserDefaults.standard
     weak var captchaImageView: UIImageView?
+    weak var captchaTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class ViewController: FormViewController {
         
             <<< CaptchaRow() {
                 self.captchaImageView = $0.cell.captchaImageView
+                self.captchaTextField = $0.cell.textField
                 $0.cell.textField.placeholder = "Введите символы с картинки"
             }.onCellHighlightChanged({ (cell, row) in
                 if !row.isHighlighted, row.value != nil {
@@ -60,11 +63,28 @@ class ViewController: FormViewController {
             API.shared.getCaptcha() { (image) in
                 if image != nil {
                     self.captchaImageView?.image = image
+                    self.recognizeImage(image!)
                 }
             }
         }
     }
+    
+    fileprivate func recognizeImage(_ image: UIImage) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let tesseract:G8Tesseract = G8Tesseract(language:"eng")
+            
+            tesseract.delegate = self
+            tesseract.image = image.g8_blackAndWhite()
+            tesseract.recognize()
+            
+            DispatchQueue.main.async { // 2
+                self.captchaTextField?.text = tesseract.recognizedText
+            }
+        }
+    }
 
-
+    func shouldCancelImageRecognitionForTesseract(tesseract: G8Tesseract!) -> Bool {
+        return false; // return true if you need to interrupt tesseract before it finishes
+    }
 }
 

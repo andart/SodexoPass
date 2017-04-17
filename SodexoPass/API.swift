@@ -98,7 +98,7 @@ class API {
         self.request(RequestObject.balancePath, parameters: ["ean": cardNumber, "captcha": captchaCode]) { (dataResponse) in
             let json = JSON(data: dataResponse.data!)
             print("")
-            NSString(data: dataResponse.data, encoding:String.Encoding.utf8)
+//            NSString(data: dataResponse.data, encoding:String.Encoding.utf8)
         }
     }
     

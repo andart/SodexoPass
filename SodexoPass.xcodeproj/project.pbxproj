@@ -14,6 +14,8 @@
 		05731C021E9F6B2B00B5C81B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05731C001E9F6B2B00B5C81B /* Main.storyboard */; };
 		05731C041E9F6B2B00B5C81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05731C031E9F6B2B00B5C81B /* Assets.xcassets */; };
 		05731C071E9F6B2B00B5C81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05731C051E9F6B2B00B5C81B /* LaunchScreen.storyboard */; };
+		9ACC08E21EA55E7C008AFE09 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACC08E11EA55E7C008AFE09 /* libz.1.1.3.tbd */; };
+		9ACC08EB1EA56154008AFE09 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9ACC08EA1EA56154008AFE09 /* tessdata */; };
 		E7291A990221B048238523AC /* Pods_SodexoPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,9 @@
 		05731C061E9F6B2B00B5C81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05731C081E9F6B2B00B5C81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SodexoPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACC08E01EA55418008AFE09 /* SodexoPass-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SodexoPass-Bridging-Header.h"; sourceTree = "<group>"; };
+		9ACC08E11EA55E7C008AFE09 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		9ACC08EA1EA56154008AFE09 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A4213775F1AAD7A9412D5CDF /* Pods-SodexoPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SodexoPass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass.debug.xcconfig"; sourceTree = "<group>"; };
 		E3935189F2EB3A74082E0901 /* Pods-SodexoPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SodexoPass.release.xcconfig"; path = "Pods/Target Support Files/Pods-SodexoPass/Pods-SodexoPass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACC08E21EA55E7C008AFE09 /* libz.1.1.3.tbd in Frameworks */,
 				E7291A990221B048238523AC /* Pods_SodexoPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +71,7 @@
 		05731BFB1E9F6B2B00B5C81B /* SodexoPass */ = {
 			isa = PBXGroup;
 			children = (
+				9ACC08EA1EA56154008AFE09 /* tessdata */,
 				05731BFC1E9F6B2B00B5C81B /* AppDelegate.swift */,
 				05731BFE1E9F6B2B00B5C81B /* ViewController.swift */,
 				05731C001E9F6B2B00B5C81B /* Main.storyboard */,
@@ -73,6 +80,7 @@
 				05731C081E9F6B2B00B5C81B /* Info.plist */,
 				055F19371E9F7B8A0068E7E5 /* CaptchaRow.swift */,
 				055F19391E9F84E40068E7E5 /* API.swift */,
+				9ACC08E01EA55418008AFE09 /* SodexoPass-Bridging-Header.h */,
 			);
 			path = SodexoPass;
 			sourceTree = "<group>";
@@ -89,6 +97,7 @@
 		EA89BC56AABE5EABEFFF81A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ACC08E11EA55E7C008AFE09 /* libz.1.1.3.tbd */,
 				5F8D59B18A906E82E6ED0941 /* Pods_SodexoPass.framework */,
 			);
 			name = Frameworks;
@@ -129,6 +138,7 @@
 				TargetAttributes = {
 					05731BF81E9F6B2B00B5C81B = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = G278HD3U89;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -157,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05731C071E9F6B2B00B5C81B /* LaunchScreen.storyboard in Resources */,
+				9ACC08EB1EA56154008AFE09 /* tessdata in Resources */,
 				05731C041E9F6B2B00B5C81B /* Assets.xcassets in Resources */,
 				05731C021E9F6B2B00B5C81B /* Main.storyboard in Resources */,
 			);
@@ -192,7 +203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC50BE994391B11EB9B66E6D /* [CP] Copy Pods Resources */ = {
@@ -345,7 +356,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G278HD3U89;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SodexoPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -353,6 +365,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SodexoPass/SodexoPass-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -363,13 +376,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = G278HD3U89;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SodexoPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wtf.SodexoPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SodexoPass/SodexoPass-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
